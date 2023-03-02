@@ -4,7 +4,7 @@ title: "Simulation of diffusion paths"
 output: html_notebook
 ---
 
-The simulation and study of solutions of stochastic differential equations requires the R packages sde https://cran.r-project.org/web/packages/sde/sde.pdf and fda https://cran.r-project.org/web/packages/fda/fda.pdf 
+The simulation and study of solutions of stochastic differential equations requires the R packages sde (https://cran.r-project.org/web/packages/sde/sde.pdf) and fda (https://cran.r-project.org/web/packages/fda/fda.pdf). 
 
 ```{r}
 plot(cars)
