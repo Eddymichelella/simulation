@@ -6,6 +6,7 @@ output: html_notebook
 
 ```{r}
 plot(cars)
+summary(cars)
 ```
 
 
