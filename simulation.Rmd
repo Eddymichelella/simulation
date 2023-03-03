@@ -6,8 +6,22 @@ output: html_notebook
 The simulation and study of solutions of stochastic differential equations requires the R packages sde (https://cran.r-project.org/web/packages/sde/sde.pdf) and fda (https://cran.r-project.org/web/packages/fda/fda.pdf). 
 
 ```{r}
-plot(cars)
-summary(cars)
+library(sde)
+library(fda)
 ```
 
+We use the function sde.sim of R-package sde to simulation diffusion paths.
 
+```{r}
+model.sim<-function(x0,n,N,model){
+  d<-expression(drift(x))
+  s<-expression(sig(x)); s.x<-expression(sig.x(x))
+  if(model=="OU") X=sde.sim(t0=0,T=1,X0=x0,N=n+1,M=N,theta=c(1,1,1),model="OU")
+  if(model=="CIR") X=sde.sim(t0=0,T=1,X0=x0,N=n+1,M=N,theta=c(1,1,1),model="CIR")
+  if(model=="drift") X=sde.sim(t0=0,T=1,X0=x0,N=n+1,M=N,drift=d,sigma=s,sigma.x=s.x)
+
+  return(X)
+}
+```
+
+The function model.sim takes as arguments 
