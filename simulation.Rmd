@@ -24,5 +24,5 @@ model.sim<-function(x0,n,N,model){
 }
 ```
 
-The function model.sim takes as arguments the value x0 of the diffusion process at t=0, the length n of diffusion paths, the number of diffusion paths and the chosen model. We can as diffusion model, the Ornstein Uhlenbeck model (OU), the Cox Ingersoll Ross model (CIR), or any other model characterized by the drift and the diffusion coefficients including the OU.
+The function model.sim takes as arguments the value x0 of the diffusion process at t=0, the length n of diffusion paths, the number $N$ of diffusion paths and the chosen model. We can choose as diffusion model, the Ornstein Uhlenbeck model (OU), the Cox Ingersoll Ross model (CIR), or any other model characterized by the drift and the diffusion coefficients including the OU.
 
